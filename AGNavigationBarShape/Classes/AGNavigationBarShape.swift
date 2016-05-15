@@ -27,15 +27,7 @@ public class AGNavigationBarShape: UINavigationBar {
       self.mode = ShapeMode(rawValue: shapeIndex) ?? .Zigzag
     }
   }
-  
-  override init(frame: CGRect) {
-    super.init(frame: frame)
-  }
-  
-  required public init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-  }
-  
+    
   // Methods
   
   override public func drawRect(rect: CGRect) {
