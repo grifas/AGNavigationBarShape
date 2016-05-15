@@ -15,8 +15,9 @@ public class AGNavigationBarShape: UINavigationBar {
     case Zigzag
   }
   
-  @IBInspectable public var statusBarColor: UIColor? = UIColor.whiteColor()
-  @IBInspectable public var navigationBarColor: UIColor? = UIColor.whiteColor()
+  public var mode: ShapeMode = ShapeMode.Zigzag
+  
+  @IBInspectable public var color: UIColor = UIColor(red: (251.0/255.0), green: (101.0/255), blue: (68.0/255.0), alpha: 1.0)
   @IBInspectable public var nbShape: Int = 10
   @IBInspectable public var shapeMode: Int {
     get {
@@ -27,31 +28,35 @@ public class AGNavigationBarShape: UINavigationBar {
     }
   }
   
-  public var mode: ShapeMode = ShapeMode.Zigzag
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+  }
   
+  required public init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+  }
   
   // Methods
   
   override public func drawRect(rect: CGRect) {
     
     // Apply color on status bar
-    if let statusBarColor = statusBarColor {
-      let statusBar: UIView = UIApplication.sharedApplication().valueForKey("statusBar") as! UIView
+    if let statusBar: UIView = UIApplication.sharedApplication().valueForKey("statusBar") as! UIView {
       if statusBar.respondsToSelector(Selector("setBackgroundColor:")) {
-        statusBar.backgroundColor = statusBarColor
+        statusBar.backgroundColor = self.color
       }
     }
     
     switch self.mode {
     case .Wave:
       self.drawZigzag()
-    case .Zigzag:
+    default:
       self.drawZigzag()
     }
   }
   
   /*
-   Add a Zigzag form to the navigation bar
+   Add a Zigzag shape to the navigation bar
    */
   func drawZigzag() {
     // Get Height and Width
@@ -78,12 +83,7 @@ public class AGNavigationBarShape: UINavigationBar {
     bezierPath.addLineToPoint(CGPointMake(layerWidth, 0))
     bezierPath.closePath()
     
-    // Apply color on navigation bar
-    if let navigationBarColor = navigationBarColor {
-      navigationBarColor.setFill()
-    } else {
-      UIColor.whiteColor().setFill()
-    }
+    self.color.setFill()
     bezierPath.fill()
     
     // Mask to Path
@@ -91,11 +91,7 @@ public class AGNavigationBarShape: UINavigationBar {
     shapeLayer.path = bezierPath.CGPath
     self.layer.mask = shapeLayer
     
-    if let navigationBarColor = navigationBarColor {
-      self.layer.shadowColor = navigationBarColor.CGColor
-    } else {
-      self.layer.shadowColor = UIColor.whiteColor().CGColor
-    }
+    self.layer.shadowColor = self.color.CGColor
     self.layer.shadowOffset = CGSizeMake(0.0, heightShape)
     self.layer.shadowOpacity = 1
     self.layer.shouldRasterize = true
