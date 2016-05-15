@@ -36,15 +36,31 @@ Add `import AGNavigationBarShape` in your file
 In your app delegate:
 
 ```swift
-description is coming
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+// Override point for customization after application launch.
+
+let rootViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()
+let navController = UINavigationController(navigationBarClass: AGNavigationBarShape.self, toolbarClass: nil)
+
+(navController.navigationBar as? AGNavigationBarShape)?.color = UIColor.purpleColor()
+(navController.navigationBar as? AGNavigationBarShape)?.nbShape = 5
+
+navController.viewControllers = [rootViewController!]
+
+window?.rootViewController = navController
+window?.makeKeyWindow()
+return true
+}
 ```
 
 ####Storyboard Support
 
 1. Add `AGNavigationBarShape` Class and  Module to UINavigationController's navigationBar in Identity Inspector
+
 ![sample](Screenshots/screenshot1.png)
 
 2. If you want to custom it, set options in the Attributes Inspector tab
+
 ![sample](Screenshots/screenshot2.png)
 
 ## Features
