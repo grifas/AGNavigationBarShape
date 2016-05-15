@@ -7,6 +7,9 @@
 
 ## Example
 
+![alt tag](https://github.com/grifas/AGNavigationBarShape/tree/master/Example/Images/Sample1.png)
+![alt tag](https://github.com/grifas/AGNavigationBarShape/tree/master/Example/Images/Sample2.png)
+
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
