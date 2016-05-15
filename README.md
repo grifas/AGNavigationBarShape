@@ -4,11 +4,12 @@
 [![Version](https://img.shields.io/cocoapods/v/AGNavigationBarShape.svg?style=flat)](http://cocoapods.org/pods/AGNavigationBarShape)
 [![License](https://img.shields.io/cocoapods/l/AGNavigationBarShape.svg?style=flat)](http://cocoapods.org/pods/AGNavigationBarShape)
 [![Platform](https://img.shields.io/cocoapods/p/AGNavigationBarShape.svg?style=flat)](http://cocoapods.org/pods/AGNavigationBarShape)
+[![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat
+)](https://developer.apple.com/swift)
 
 ## Example
 
-![alt tag](https://github.com/grifas/AGNavigationBarShape/tree/master/Example/Images/Sample1.png)
-![alt tag](https://github.com/grifas/AGNavigationBarShape/tree/master/Example/Images/Sample2.png)
+![sample](Screenshots/screenshot.gif)
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
