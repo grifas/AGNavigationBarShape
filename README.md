@@ -22,7 +22,7 @@ pod "AGNavigationBarShape"
 
 ## Author
 
-Aurelien Grifasi, aurelien.grifasi@etixgroup.com
+Aurelien Grifasi, aurelien.grifasi@gmail.com
 
 ## License
 
