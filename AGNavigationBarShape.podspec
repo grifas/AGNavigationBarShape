@@ -23,7 +23,7 @@ AGNavigationBarShape allows you to custom the navigation bar with severals shape
 
   s.homepage         = "https://github.com/grifas/AGNavigationBarShape"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-  s.license          = 'MIT'
+  s.license = { :type => "MIT", :file => "LICENSE" }
   s.author           = { "Aurelien Grifasi" => "aurelien.grifasi@gmail.com" }
   s.source           = { :git => "https://github.com/grifas/AGNavigationBarShape.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
