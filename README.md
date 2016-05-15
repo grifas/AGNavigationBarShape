@@ -1,6 +1,6 @@
 # AGNavigationBarShape
 
-[![CI Status](http://img.shields.io/travis/Aurelien Grifasi/AGNavigationBarShape.svg?style=flat)](https://travis-ci.org/Aurelien Grifasi/AGNavigationBarShape)
+[![CI Status](http://img.shields.io/travis/grifas/AGNavigationBarShape.svg?style=flat)](https://travis-ci.org/Aurelien Grifasi/AGNavigationBarShape)
 [![Version](https://img.shields.io/cocoapods/v/AGNavigationBarShape.svg?style=flat)](http://cocoapods.org/pods/AGNavigationBarShape)
 [![License](https://img.shields.io/cocoapods/l/AGNavigationBarShape.svg?style=flat)](http://cocoapods.org/pods/AGNavigationBarShape)
 [![Platform](https://img.shields.io/cocoapods/p/AGNavigationBarShape.svg?style=flat)](http://cocoapods.org/pods/AGNavigationBarShape)
