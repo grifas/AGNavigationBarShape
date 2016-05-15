@@ -1,0 +1,16 @@
+PODS:
+  - AGNavigationBarShape (0.1.0)
+
+DEPENDENCIES:
+  - AGNavigationBarShape (from `../`)
+
+EXTERNAL SOURCES:
+  AGNavigationBarShape:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AGNavigationBarShape: a5b269b2148c5b162e10ad982253049ce3f58a16
+
+PODFILE CHECKSUM: 5bc791c801d688b0084c21319a73dca9836dd33a
+
+COCOAPODS: 1.0.0

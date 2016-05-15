@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AGNavigationBarShape_Example' do
+  pod 'AGNavigationBarShape', :path => '../'
+
+  target 'AGNavigationBarShape_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

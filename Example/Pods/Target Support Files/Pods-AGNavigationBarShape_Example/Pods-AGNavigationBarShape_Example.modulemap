@@ -1,0 +1,6 @@
+framework module Pods_AGNavigationBarShape_Example {
+  umbrella header "Pods-AGNavigationBarShape_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
