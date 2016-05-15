@@ -41,13 +41,16 @@ description is coming
 
 ####Storyboard Support
 
-1. Add `AGNavigationBarShape` Class and  Module to UINavigationController's navigationBar
+1. Add `AGNavigationBarShape` Class and  Module to UINavigationController's navigationBar in Identity Inspector
+![sample](Screenshots/screenshot1.png)
+
 2. If you want to custom it, set options in the Attributes Inspector tab
+![sample](Screenshots/screenshot2.png)
 
 ## Features
 -  Choose shape mode (0: Zigzag, 1: Wave) (Zigzag by default)
 -  Custom number of shape (10 by default)
--  Custom status bar background's color (white by default) 
+-  Custom background color (orange by default) 
 
 ## Author
 
