@@ -29,7 +29,7 @@ public class AGNavigationBarShape: UINavigationBar {
     }
   }
   
-  var bezierPath: UIBezierPath = UIBezierPath()
+  let bezierPath: UIBezierPath = UIBezierPath()
   let heightShape: CGFloat = 10
   
   // Methods
@@ -99,7 +99,7 @@ public class AGNavigationBarShape: UINavigationBar {
    */
   func drawWave() {
     let width = self.layer.frame.width
-    var height = self.layer.frame.height
+    let height = self.layer.frame.height
 
     self.bezierPath.moveToPoint(CGPointMake(0, 0))
     self.bezierPath.addLineToPoint(CGPointMake(0, height))
