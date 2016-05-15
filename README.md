@@ -42,8 +42,9 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 let rootViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()
 let navController = UINavigationController(navigationBarClass: AGNavigationBarShape.self, toolbarClass: nil)
 
+(navController.navigationBar as? AGNavigationBarShape)?.mode = .Zigzag
 (navController.navigationBar as? AGNavigationBarShape)?.color = UIColor.purpleColor()
-(navController.navigationBar as? AGNavigationBarShape)?.nbShape = 5
+(navController.navigationBar as? AGNavigationBarShape)?.cycles = 5 // odd number
 
 navController.viewControllers = [rootViewController!]
 
@@ -55,7 +56,7 @@ return true
 
 ####Storyboard Support
 
-1. Add `AGNavigationBarShape` Class and  Module to UINavigationController's navigationBar in Identity Inspector
+1. Add `AGNavigationBarShape` Class and Module to UINavigationController's navigationBar in Identity Inspector
 
 ![sample](Screenshots/screenshot1.png)
 
@@ -65,7 +66,7 @@ return true
 
 ## Features
 -  Choose shape mode (0: Zigzag, 1: Wave) (Zigzag by default, Wave is developing)
--  Custom number of shape (10 by default)
+-  Custom number of cycle by an odd number (9 by default)
 -  Custom background color (orange by default) 
 
 ## Author

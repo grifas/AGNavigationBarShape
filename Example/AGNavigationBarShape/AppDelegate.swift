@@ -21,8 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let rootViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()
     let navController = UINavigationController(navigationBarClass: AGNavigationBarShape.self, toolbarClass: nil)
 
+    (navController.navigationBar as? AGNavigationBarShape)?.mode = .Zigzag
     (navController.navigationBar as? AGNavigationBarShape)?.color = UIColor.purpleColor()
-    (navController.navigationBar as? AGNavigationBarShape)?.nbShape = 5
+    (navController.navigationBar as? AGNavigationBarShape)?.cycles = 5
     
     
     navController.viewControllers = [rootViewController!]
