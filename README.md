@@ -7,15 +7,15 @@
 [![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat
 )](https://developer.apple.com/swift)
 
-## Example
+iOS Navigation Bar with customs shapes written in Swift 2
 
 ![sample](Screenshots/screenshot.gif)
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
 ## Installation
+
+####CocoaPods
 
 AGNavigationBarShape is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -23,6 +23,31 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "AGNavigationBarShape"
 ```
+
+####Manually
+Add the `AGNavigationBarShape.swift` file to your project. 
+
+##Usage
+
+###Setup
+
+Add `import AGNavigationBarShape` in your file
+
+In your app delegate:
+
+```swift
+description is coming
+```
+
+####Storyboard Support
+
+1. Add `AGNavigationBarShape` Class and  Module to UINavigationController's navigationBar
+2. If you want to custom it, set options in the Attributes Inspector tab
+
+## Features
+-  Choose shape mode (0: Zigzag, 1: Wave) (Zigzag by default)
+-  Custom number of shape (10 by default)
+-  Custom status bar background's color (white by default) 
 
 ## Author
 
