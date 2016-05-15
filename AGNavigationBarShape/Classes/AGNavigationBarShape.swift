@@ -41,7 +41,7 @@ public class AGNavigationBarShape: UINavigationBar {
   override public func drawRect(rect: CGRect) {
     
     // Apply color on status bar
-    if let statusBar: UIView = UIApplication.sharedApplication().valueForKey("statusBar") as! UIView {
+    if let statusBar: UIView = UIApplication.sharedApplication().valueForKey("statusBar") as? UIView {
       if statusBar.respondsToSelector(Selector("setBackgroundColor:")) {
         statusBar.backgroundColor = self.color
       }
