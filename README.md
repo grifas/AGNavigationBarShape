@@ -48,7 +48,7 @@ description is coming
 ![sample](Screenshots/screenshot2.png)
 
 ## Features
--  Choose shape mode (0: Zigzag, 1: Wave) (Zigzag by default)
+-  Choose shape mode (0: Zigzag, 1: Wave) (Zigzag by default, Wave is developing)
 -  Custom number of shape (10 by default)
 -  Custom background color (orange by default) 
 
