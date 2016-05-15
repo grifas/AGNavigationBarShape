@@ -29,12 +29,12 @@ public class AGNavigationBarShape: UINavigationBar {
     }
   }
   
-  let bezierPath: UIBezierPath = UIBezierPath()
   let heightShape: CGFloat = 10
   
   // Methods
   
   override public func drawRect(rect: CGRect) {
+    let bezierPath: UIBezierPath = UIBezierPath()
     
     // Apply color on status bar
     if let statusBar: UIView = UIApplication.sharedApplication().valueForKey("statusBar") as? UIView {
@@ -51,18 +51,18 @@ public class AGNavigationBarShape: UINavigationBar {
     // Draw Shape
     switch self.mode {
     case .Wave:
-      self.drawWave()
+      self.drawWave(bezierPath)
     default:
-      self.drawZigzag()
+      self.drawZigzag(bezierPath)
     }
     
     // Fill Shape
     self.color.setFill()
-    self.bezierPath.fill()
+    bezierPath.fill()
     
     // Mask to Path
     let shapeLayer = CAShapeLayer()
-    shapeLayer.path = self.bezierPath.CGPath
+    shapeLayer.path = bezierPath.CGPath
     self.layer.mask = shapeLayer
     
     // Display Shape thanks to layer shadow
@@ -75,34 +75,34 @@ public class AGNavigationBarShape: UINavigationBar {
   /*
    Add a Zigzag shape to the navigation bar
    */
-  func drawZigzag() {
+  func drawZigzag(bezierPath: UIBezierPath) {
     let width = self.layer.frame.width
     let height = self.layer.frame.height
     
-    self.bezierPath.moveToPoint(CGPointMake(0, 0))
-    self.bezierPath.addLineToPoint(CGPointMake(0, height))
+    bezierPath.moveToPoint(CGPointMake(0, 0))
+    bezierPath.addLineToPoint(CGPointMake(0, height))
     
     let cycleSizeHalf: CGFloat = (width / CGFloat(self.cycles)) / 2
     var x: CGFloat = 0
     for _ in 1...(self.cycles * 2) {
       x = x + cycleSizeHalf
-      self.bezierPath.addLineToPoint(CGPointMake(x, height + self.heightShape))
+      bezierPath.addLineToPoint(CGPointMake(x, height + self.heightShape))
       x = x + cycleSizeHalf
-      self.bezierPath.addLineToPoint(CGPointMake(x, height))
+      bezierPath.addLineToPoint(CGPointMake(x, height))
     }
-    self.bezierPath.addLineToPoint(CGPointMake(width, 0))
-    self.bezierPath.closePath()
+    bezierPath.addLineToPoint(CGPointMake(width, 0))
+    bezierPath.closePath()
   }
   
   /*
    Add a Wave shape to the navigation bar
    */
-  func drawWave() {
+  func drawWave(bezierPath: UIBezierPath) {
     let width = self.layer.frame.width
     let height = self.layer.frame.height
 
-    self.bezierPath.moveToPoint(CGPointMake(0, 0))
-    self.bezierPath.addLineToPoint(CGPointMake(0, height))
+    bezierPath.moveToPoint(CGPointMake(0, 0))
+    bezierPath.addLineToPoint(CGPointMake(0, height))
 
     let cycleSize = width / CGFloat(self.cycles)
     var x: CGFloat = 0
@@ -110,21 +110,21 @@ public class AGNavigationBarShape: UINavigationBar {
     for i in 0..<self.cycles {
       if ((i % 2) == 0) {
         if ((i + 1) == self.cycles) {
-          self.bezierPath.addQuadCurveToPoint(CGPointMake(x + cycleSize, height), controlPoint: CGPointMake(x + cycleSize / 2, yc + 5))
+          bezierPath.addQuadCurveToPoint(CGPointMake(x + cycleSize, height), controlPoint: CGPointMake(x + cycleSize / 2, yc + 5))
         } else {
-          self.bezierPath.addQuadCurveToPoint(CGPointMake(x + cycleSize, yc), controlPoint: CGPointMake(x + cycleSize / 2, yc + 5))
+          bezierPath.addQuadCurveToPoint(CGPointMake(x + cycleSize, yc), controlPoint: CGPointMake(x + cycleSize / 2, yc + 5))
         }
       } else {
         if ((i + 1) == self.cycles) {
-          self.bezierPath.addQuadCurveToPoint(CGPointMake(x + cycleSize, height), controlPoint: CGPointMake(x + cycleSize / 2, yc - 5))
+          bezierPath.addQuadCurveToPoint(CGPointMake(x + cycleSize, height), controlPoint: CGPointMake(x + cycleSize / 2, yc - 5))
         } else {
-          self.bezierPath.addQuadCurveToPoint(CGPointMake(x + cycleSize, yc), controlPoint: CGPointMake(x + cycleSize / 2, yc - 5))
+          bezierPath.addQuadCurveToPoint(CGPointMake(x + cycleSize, yc), controlPoint: CGPointMake(x + cycleSize / 2, yc - 5))
         }
       }
       x += cycleSize
     }
-    self.bezierPath.addLineToPoint(CGPointMake(width, 0))
-    self.bezierPath.closePath()
+    bezierPath.addLineToPoint(CGPointMake(width, 0))
+    bezierPath.closePath()
   }
   
 }
