@@ -7,7 +7,7 @@
 [![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat
 )](https://developer.apple.com/swift)
 
-iOS Navigation Bar with customs shapes written in Swift 2
+iOS Navigation Bar with customs shapes (Zigzag, Wave and Square) written in Swift 2.
 
 ![sample](Screenshots/screenshot.gif)
 
@@ -44,7 +44,7 @@ let navController = UINavigationController(navigationBarClass: AGNavigationBarSh
 
 (navController.navigationBar as? AGNavigationBarShape)?.mode = .Zigzag
 (navController.navigationBar as? AGNavigationBarShape)?.color = UIColor.purpleColor()
-(navController.navigationBar as? AGNavigationBarShape)?.cycles = 5 // odd number
+(navController.navigationBar as? AGNavigationBarShape)?.cycles = 5
 
 navController.viewControllers = [rootViewController!]
 
@@ -65,8 +65,8 @@ return true
 ![sample](Screenshots/screenshot2.png)
 
 ## Features
--  Choose shape mode (0: Zigzag, 1: Wave) (Zigzag by default, Wave is developing)
--  Custom number of cycle by an odd number (9 by default)
+-  Choose shape mode (0: Zigzag, 1: Wave, 2: Square) (Zigzag by default)
+-  Custom number of cycle (9 by default)
 -  Custom background color (orange by default) 
 
 ## Author

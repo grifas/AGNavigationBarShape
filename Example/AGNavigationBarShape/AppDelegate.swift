@@ -18,18 +18,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
     
-    let rootViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()
-    let navController = UINavigationController(navigationBarClass: AGNavigationBarShape.self, toolbarClass: nil)
-
-    (navController.navigationBar as? AGNavigationBarShape)?.mode = .Zigzag
-    (navController.navigationBar as? AGNavigationBarShape)?.color = UIColor.purpleColor()
-    (navController.navigationBar as? AGNavigationBarShape)?.cycles = 5
-    
-    
-    navController.viewControllers = [rootViewController!]
-  
-    window?.rootViewController = navController
-    window?.makeKeyWindow()
+//    let rootViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()
+//    let navController = UINavigationController(navigationBarClass: AGNavigationBarShape.self, toolbarClass: nil)
+//
+//    (navController.navigationBar as? AGNavigationBarShape)?.mode = .Square
+//    (navController.navigationBar as? AGNavigationBarShape)?.color = UIColor.purpleColor()
+//    (navController.navigationBar as? AGNavigationBarShape)?.cycles = 10
+//    
+//    navController.viewControllers = [rootViewController!]
+//  
+//    window?.rootViewController = navController
+//    window?.makeKeyWindow()
     return true
   }
   
