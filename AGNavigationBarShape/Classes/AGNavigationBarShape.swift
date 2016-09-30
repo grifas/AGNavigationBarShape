@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class AGNavigationBarShape: UINavigationBar {
+open class AGNavigationBarShape: UINavigationBar {
   
   // Availables Shapes
   public enum ShapeMode: Int {
@@ -17,11 +17,11 @@ public class AGNavigationBarShape: UINavigationBar {
     case square
   }
   
-  public var mode: ShapeMode = ShapeMode.zigzag
+  open var mode: ShapeMode = ShapeMode.zigzag
   let heightShape: CGFloat = 10
   
-  @IBInspectable public var color: UIColor = UIColor(red: (251.0/255.0), green: (101.0/255), blue: (68.0/255.0), alpha: 1.0)
-  @IBInspectable public var cycles: Int = 9
+  @IBInspectable open var color: UIColor = UIColor(red: (251.0/255.0), green: (101.0/255), blue: (68.0/255.0), alpha: 1.0)
+  @IBInspectable open var cycles: Int = 9
   @IBInspectable var shapeMode: Int {
     get {
       return self.mode.rawValue
@@ -33,7 +33,7 @@ public class AGNavigationBarShape: UINavigationBar {
   
   // Methods
   
-  override public func draw(_ rect: CGRect) {
+  override open func draw(_ rect: CGRect) {
     let bezierPath: UIBezierPath = UIBezierPath()
     
     // Apply color on status bar
