@@ -29,6 +29,12 @@ it, simply add the following line to your Podfile:
 pod "AGNavigationBarShape"
 ```
 
+For swift 3:
+
+```ruby
+pod 'AGNavigationBarShape', :git => 'https://github.com/grifas/AGNavigationBarShape.git', :branch => 'swift3'
+```
+
 ####Manually
 Add the `AGNavigationBarShape.swift` file to your project. 
 
