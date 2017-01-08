@@ -1,20 +1,9 @@
-# references:
-# * http://www.objc.io/issue-6/travis-ci.html
-# * https://github.com/supermarin/xcpretty#usage
-
+notifications:
+  email:
+    recipients:
+      - aurelien.grifasi@gmail.com
 language: objective-c  #1
 osx_image: xcode8 #2
 xcode_project: AGNavigationBarShape.xcodeproj #3
 xcode_scheme: AGNavigationBarShape-Example #4
-xcode_sdk: iphonesimulator9.0 #5
-# cache: cocoapods
-# podfile: Example/Podfile
-before_install:
-- gem install cocoapods # Since Travis is not always on latest version
-# - pod install --project-directory=Example
-script:
-  - set -o pipefail
-  - xcodebuild -version
-  - xcodebuild -showsdks
-#- set -o pipefail && xcodebuild test -workspace Example/AGNavigationBarShape.xcworkspace -scheme AGNavigationBarShape-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
-- pod lib lint
+script: xcodebuild build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
