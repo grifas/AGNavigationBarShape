@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = "AGNavigationBarShape"
-s.version          = "0.3.0"
+s.version          = "0.3.1"
 s.summary          = "AGNavigationBarShape is a custom navigation bar with severals shapes."
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ s.summary          = "AGNavigationBarShape is a custom navigation bar with sever
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
 s.description      = <<-DESC
-AGNavigationBarShape allows you to custom the navigation bar with severals shapes availables.
+AGNavigationBarShape allows you to custom the navigation bar with severals shapes availables. The height of the shape is also customizable.
 DESC
 
 s.homepage         = "https://github.com/grifas/AGNavigationBarShape"

@@ -11,41 +11,52 @@ import AGNavigationBarShape
 
 class ViewController: UIViewController {
   
-  @IBOutlet weak var zigzagButton: UIButton!
-  @IBOutlet weak var waveButton: UIButton!
-  @IBOutlet weak var squareButton: UIButton!
+	@IBOutlet weak var segmentedControl: UISegmentedControl!
   @IBOutlet weak var cyclesTexField: UITextField!
-  
+	@IBOutlet weak var slider: UISlider!
+	
   override func viewDidLoad() {
     super.viewDidLoad()
     
     self.title = "AGNavigationBarShape"
-    self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-    
-    self.zigzagButton.addTarget(self, action: #selector(self.displayViewControllerWithZigzagNavigationBar), for: .touchUpInside)
-    self.waveButton.addTarget(self, action: #selector(self.displayViewControllerWithWaveNavigationBar), for: .touchUpInside)
-    self.squareButton.addTarget(self, action: #selector(self.displayViewControllerWithSquareNavigationBar), for: .touchUpInside)
+		self.slider.minimumValue = 0
+		self.slider.maximumValue = 100
+		self.slider.value = 10
   }
-  
+	
+	@IBAction func actionSlider(sender: UISlider) {
+		let value = CGFloat(sender.value)
+		
+		(self.navigationController?.navigationBar as? AGNavigationBarShape)?.heightShape = value
+		(self.navigationController?.navigationBar as? AGNavigationBarShape)?.layoutSubviews()
+	}
+	
+	@IBAction func update(sender: UISegmentedControl) {
+		switch sender.selectedSegmentIndex {
+		case 0:
+			self.displayViewControllerWithZigzagNavigationBar()
+		case 1:
+			self.displayViewControllerWithWaveNavigationBar()
+		default:
+			self.displayViewControllerWithSquareNavigationBar()
+		}
+		(self.navigationController?.navigationBar as? AGNavigationBarShape)?.cycles = Int(self.cyclesTexField.text ?? "0")!
+		(self.navigationController?.navigationBar as? AGNavigationBarShape)?.layoutSubviews()
+	}
+	
   func displayViewControllerWithZigzagNavigationBar() {
-    (self.navigationController!.navigationBar as! AGNavigationBarShape).mode = .zigzag
-    (self.navigationController!.navigationBar as! AGNavigationBarShape).color = UIColor.red
-    (self.navigationController!.navigationBar as! AGNavigationBarShape).cycles = Int(self.cyclesTexField.text!)!
-    (self.navigationController!.navigationBar as! AGNavigationBarShape).layoutSubviews()
+		(self.navigationController?.navigationBar as? AGNavigationBarShape)?.mode = .zigzag
+    (self.navigationController?.navigationBar as? AGNavigationBarShape)?.color = UIColor.red
   }
 
   func displayViewControllerWithWaveNavigationBar() {
-    (self.navigationController!.navigationBar as! AGNavigationBarShape).mode = .wave
-    (self.navigationController!.navigationBar as! AGNavigationBarShape).color = UIColor.orange
-    (self.navigationController!.navigationBar as! AGNavigationBarShape).cycles = Int(self.cyclesTexField.text!)!
-    (self.navigationController!.navigationBar as! AGNavigationBarShape).layoutSubviews()
-  }
+		(self.navigationController?.navigationBar as? AGNavigationBarShape)?.mode = .wave
+		(self.navigationController?.navigationBar as? AGNavigationBarShape)?.color = UIColor.orange
+	}
 
   func displayViewControllerWithSquareNavigationBar() {
-    (self.navigationController!.navigationBar as! AGNavigationBarShape).mode = .square
-    (self.navigationController!.navigationBar as! AGNavigationBarShape).color = UIColor.purple
-    (self.navigationController!.navigationBar as! AGNavigationBarShape).cycles = Int(self.cyclesTexField.text!)!
-    (self.navigationController!.navigationBar as! AGNavigationBarShape).layoutSubviews()
-  }
+		(self.navigationController?.navigationBar as? AGNavigationBarShape)?.mode = .square
+    (self.navigationController?.navigationBar as? AGNavigationBarShape)?.color = UIColor.purple
+	}
   
 }
