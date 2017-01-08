@@ -20,36 +20,30 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     self.title = "AGNavigationBarShape"
-    self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+    self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
     
-    self.zigzagButton.addTarget(self, action: #selector(self.displayViewControllerWithZigzagNavigationBar), forControlEvents: UIControlEvents.TouchUpInside)
-    self.waveButton.addTarget(self, action: #selector(self.displayViewControllerWithWaveNavigationBar), forControlEvents: UIControlEvents.TouchUpInside)
-    self.squareButton.addTarget(self, action: #selector(self.displayViewControllerWithSquareNavigationBar), forControlEvents: UIControlEvents.TouchUpInside)
+    self.zigzagButton.addTarget(self, action: #selector(self.displayViewControllerWithZigzagNavigationBar), for: .touchUpInside)
+    self.waveButton.addTarget(self, action: #selector(self.displayViewControllerWithWaveNavigationBar), for: .touchUpInside)
+    self.squareButton.addTarget(self, action: #selector(self.displayViewControllerWithSquareNavigationBar), for: .touchUpInside)
   }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-  
   
   func displayViewControllerWithZigzagNavigationBar() {
-    (self.navigationController!.navigationBar as! AGNavigationBarShape).mode = .Zigzag
-    (self.navigationController!.navigationBar as! AGNavigationBarShape).color = UIColor.redColor()
+    (self.navigationController!.navigationBar as! AGNavigationBarShape).mode = .zigzag
+    (self.navigationController!.navigationBar as! AGNavigationBarShape).color = UIColor.red
     (self.navigationController!.navigationBar as! AGNavigationBarShape).cycles = Int(self.cyclesTexField.text!)!
     (self.navigationController!.navigationBar as! AGNavigationBarShape).layoutSubviews()
   }
 
   func displayViewControllerWithWaveNavigationBar() {
-    (self.navigationController!.navigationBar as! AGNavigationBarShape).mode = .Wave
-    (self.navigationController!.navigationBar as! AGNavigationBarShape).color = UIColor.orangeColor()
+    (self.navigationController!.navigationBar as! AGNavigationBarShape).mode = .wave
+    (self.navigationController!.navigationBar as! AGNavigationBarShape).color = UIColor.orange
     (self.navigationController!.navigationBar as! AGNavigationBarShape).cycles = Int(self.cyclesTexField.text!)!
     (self.navigationController!.navigationBar as! AGNavigationBarShape).layoutSubviews()
   }
 
   func displayViewControllerWithSquareNavigationBar() {
-    (self.navigationController!.navigationBar as! AGNavigationBarShape).mode = .Square
-    (self.navigationController!.navigationBar as! AGNavigationBarShape).color = UIColor.purpleColor()
+    (self.navigationController!.navigationBar as! AGNavigationBarShape).mode = .square
+    (self.navigationController!.navigationBar as! AGNavigationBarShape).color = UIColor.purple
     (self.navigationController!.navigationBar as! AGNavigationBarShape).cycles = Int(self.cyclesTexField.text!)!
     (self.navigationController!.navigationBar as! AGNavigationBarShape).layoutSubviews()
   }

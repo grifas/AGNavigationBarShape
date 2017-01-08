@@ -13,6 +13,7 @@
 <!--![Download](http://img.shields.io/cocoapods/aw/AGNavigationBarShape.svg?style=flat)-->
 
 iOS Navigation Bar with customs shapes (Zigzag, Wave and Square) written in Swift 2.
+ For Swift 3 see the `swift3` branch.
 
 ![sample](Screenshots/screenshot.gif)
 
