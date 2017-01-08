@@ -25,7 +25,7 @@ class ViewController: UIViewController {
   }
 	
 	@IBAction func actionSlider(sender: UISlider) {
-		let value = CGFloat(sender.value)
+		let value = Int(sender.value)
 		
 		(self.navigationController?.navigationBar as? AGNavigationBarShape)?.heightShape = value
 		(self.navigationController?.navigationBar as? AGNavigationBarShape)?.layoutSubviews()
@@ -45,17 +45,17 @@ class ViewController: UIViewController {
 	}
 	
   func displayViewControllerWithZigzagNavigationBar() {
-		(self.navigationController?.navigationBar as? AGNavigationBarShape)?.mode = .zigzag
+		(self.navigationController?.navigationBar as? AGNavigationBarShape)?.shapeMode = ShapeMode.zigzag.rawValue
     (self.navigationController?.navigationBar as? AGNavigationBarShape)?.color = UIColor.red
   }
 
   func displayViewControllerWithWaveNavigationBar() {
-		(self.navigationController?.navigationBar as? AGNavigationBarShape)?.mode = .wave
+		(self.navigationController?.navigationBar as? AGNavigationBarShape)?.shapeMode = ShapeMode.wave.rawValue
 		(self.navigationController?.navigationBar as? AGNavigationBarShape)?.color = UIColor.orange
 	}
 
   func displayViewControllerWithSquareNavigationBar() {
-		(self.navigationController?.navigationBar as? AGNavigationBarShape)?.mode = .square
+		(self.navigationController?.navigationBar as? AGNavigationBarShape)?.shapeMode = ShapeMode.square.rawValue
     (self.navigationController?.navigationBar as? AGNavigationBarShape)?.color = UIColor.purple
 	}
   

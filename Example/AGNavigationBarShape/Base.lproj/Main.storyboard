@@ -74,9 +74,23 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="04Y-U3-IaL" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BkD-C1-J4Q" customClass="AGNavigationBarShape" customModule="AGNavigationBarShape">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="BkD-C1-J4Q" customClass="AGNavigationBarShape" customModule="AGNavigationBarShape">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cycles">
+                                <integer key="value" value="9"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shapeMode">
+                                <integer key="value" value="0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="heightShape">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                <color key="value" red="0.98431372640000003" green="0.3960784376" blue="0.26666668059999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -8,27 +8,27 @@
 
 import UIKit
 
+// Availables Shapes
+public enum ShapeMode: Int {
+	case zigzag = 0
+	case wave
+	case square
+}
+
 public class AGNavigationBarShape: UINavigationBar {
 
-	@IBInspectable open var color: UIColor = UIColor(red: (251.0/255.0), green: (101.0/255), blue: (68.0/255.0), alpha: 1.0)
-	@IBInspectable open var cycles: Int = 9
-	@IBInspectable var shapeMode: Int {
-		get {
-			return self.mode.rawValue
-		}
-		set(shapeIndex) {
-			self.mode = ShapeMode(rawValue: shapeIndex) ?? .zigzag
+	@IBInspectable public var color: UIColor = UIColor(red: (251.0/255.0), green: (101.0/255), blue: (68.0/255.0), alpha: 1.0)
+	@IBInspectable public var cycles: Int = 9
+	@IBInspectable public var shapeMode: Int = 0 {
+		didSet {
+			self.shapeMode = ShapeMode(rawValue: self.shapeMode)?.rawValue ?? 0
 		}
 	}
-	
-  // Availables Shapes
-  public enum ShapeMode: Int {
-    case zigzag = 0
-    case wave
-    case square
-  }
-  public var mode: ShapeMode = ShapeMode.zigzag
-	public var heightShape: CGFloat = 10
+	@IBInspectable public var heightShape: Int = 10 {
+		didSet {
+			self.heightShape = self.heightShape >= 0 ? self.heightShape : 0
+		}
+	}
 	
 	override public func draw(_ rect: CGRect) {
 		let bezierPath: UIBezierPath = UIBezierPath()
@@ -41,7 +41,7 @@ public class AGNavigationBarShape: UINavigationBar {
 		}
 		
 		// Draw Shape
-		switch self.mode {
+		switch ShapeMode(rawValue: self.shapeMode)! {
 		case .wave:
 			self.drawWave(bezierPath)
 		case .square:
@@ -81,7 +81,7 @@ public class AGNavigationBarShape: UINavigationBar {
     var x: CGFloat = 0
     for _ in 1...(self.cycles * 2) {
       x = x + cycleSizeHalf
-      bezierPath.addLine(to: CGPoint(x: x, y: height + self.heightShape))
+      bezierPath.addLine(to: CGPoint(x: x, y: height + CGFloat(self.heightShape)))
       x = x + cycleSizeHalf
       bezierPath.addLine(to: CGPoint(x: x, y: height))
     }
@@ -106,7 +106,7 @@ public class AGNavigationBarShape: UINavigationBar {
 
     let cycleSize = width / CGFloat(self.cycles)
     var x: CGFloat = 0
-		let arcHeight = self.heightShape / 2
+		let arcHeight = CGFloat(self.heightShape) / 2
     let y: CGFloat = height + arcHeight
 		
 		for i in 0..<self.cycles {
@@ -142,9 +142,9 @@ public class AGNavigationBarShape: UINavigationBar {
     bezierPath.addLine(to: CGPoint(x: xOffset, y: height))
     
 		for i in 0..<self.cycles {
-      bezierPath.addLine(to: CGPoint(x: x, y: height + self.heightShape))
+      bezierPath.addLine(to: CGPoint(x: x, y: height + CGFloat(self.heightShape)))
       x = x + cycleSize
-      bezierPath.addLine(to: CGPoint(x: x, y: height + self.heightShape))
+      bezierPath.addLine(to: CGPoint(x: x, y: height + CGFloat(self.heightShape)))
       bezierPath.addLine(to: CGPoint(x: x, y: height))
       
       if (i + 1) != self.cycles {

@@ -18,12 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
 		
-		//    let rootViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()
-		//    let navController = UINavigationController(navigationBarClass: AGNavigationBarShape.self, toolbarClass: nil)
+		//		let rootViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()
+		//		let navController = UINavigationController(navigationBarClass: AGNavigationBarShape.self, toolbarClass: nil)
 		//
-		//    (navController.navigationBar as? AGNavigationBarShape)?.mode = .Square
-		//    (navController.navigationBar as? AGNavigationBarShape)?.color = UIColor.purpleColor()
-		//    (navController.navigationBar as? AGNavigationBarShape)?.cycles = 10
+		//		(navController.navigationBar as? AGNavigationBarShape)?.shapeMode = ShapeMode.wave.rawValue
+		//		(navController.navigationBar as? AGNavigationBarShape)?.color = UIColor.purple
+		//		(navController.navigationBar as? AGNavigationBarShape)?.cycles = 10
+		//		(navController.navigationBar as? AGNavigationBarShape)?.heightShape = 15
 		//
 		//    navController.viewControllers = [rootViewController!]
 		//

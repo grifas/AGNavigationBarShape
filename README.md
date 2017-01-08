@@ -5,12 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/AGNavigationBarShape.svg?style=flat)](http://cocoapods.org/pods/AGNavigationBarShape)
 [![Platform](https://img.shields.io/cocoapods/p/AGNavigationBarShape.svg?style=flat)](http://cocoapods.org/pods/AGNavigationBarShape)
 [![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
-
-![Download](http://img.shields.io/cocoapods/at/AGNavigationBarShape.svg?style=flat)
-<!--![Download](http://img.shields.io/cocoapods/dt/AGNavigationBarShape.svg?style=flat)-->
-<!--![Download](http://img.shields.io/cocoapods/dm/AGNavigationBarShape.svg?style=flat)-->
-<!--![Download](http://img.shields.io/cocoapods/dw/AGNavigationBarShape.svg?style=flat)-->
-<!--![Download](http://img.shields.io/cocoapods/aw/AGNavigationBarShape.svg?style=flat)-->
+[![Download](http://img.shields.io/cocoapods/at/AGNavigationBarShape.svg?style=flat)]()
+[![CocoaPods](https://img.shields.io/cocoapods/dt/AFNetworking.svg)]()
 
 iOS Navigation Bar with customs shapes (Zigzag, Wave and Square).
 
@@ -29,12 +25,6 @@ it, simply add the following line to your Podfile:
 pod "AGNavigationBarShape"
 ```
 
-For swift 3:
-
-```ruby
-pod 'AGNavigationBarShape', :git => 'https://github.com/grifas/AGNavigationBarShape.git', :branch => 'swift3'
-```
-
 ####Manually
 Add the `AGNavigationBarShape.swift` file to your project. 
 
@@ -50,19 +40,19 @@ In your app delegate:
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 // Override point for customization after application launch.
 
-let rootViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()
-let navController = UINavigationController(navigationBarClass: AGNavigationBarShape.self, toolbarClass: nil)
-
-(navController.navigationBar as? AGNavigationBarShape)?.mode = .Zigzag
-(navController.navigationBar as? AGNavigationBarShape)?.color = UIColor.purpleColor()
-(navController.navigationBar as? AGNavigationBarShape)?.cycles = 5
- (navController.navigationBar as? AGNavigationBarShape)?.heightShape = 35
-
-navController.viewControllers = [rootViewController!]
-
-window?.rootViewController = navController
-window?.makeKeyWindow()
-return true
+ let rootViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()
+ let navController = UINavigationController(navigationBarClass: AGNavigationBarShape.self, toolbarClass: nil)
+ 
+ (navController.navigationBar as? AGNavigationBarShape)?.shapeMode = ShapeMode.wave.rawValue
+ (navController.navigationBar as? AGNavigationBarShape)?.color = UIColor.purple
+ (navController.navigationBar as? AGNavigationBarShape)?.cycles = 10
+ (navController.navigationBar as? AGNavigationBarShape)?.heightShape = 15
+ 
+ navController.viewControllers = [rootViewController!]
+ 
+ window?.rootViewController = navController
+ window?.makeKeyWindow()
+ return true
 }
 ```
 
