@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/AGNavigationBarShape.svg?style=flat)](http://cocoapods.org/pods/AGNavigationBarShape)
 [![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
 [![Download](http://img.shields.io/cocoapods/at/AGNavigationBarShape.svg?style=flat)]()
-[![CocoaPods](https://img.shields.io/cocoapods/dt/AFNetworking.svg)]()
+[![CocoaPods](https://img.shields.io/cocoapods/dt/AGNavigationBarShape.svg?style=flat)]()
 
 iOS Navigation Bar with customs shapes (Zigzag, Wave and Square).
 
