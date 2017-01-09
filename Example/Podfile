@@ -1,5 +1,5 @@
 use_frameworks!
 
 target 'AGNavigationBarShape_Example' do
-	pod 'AGNavigationBarShape', :path => './'
+	pod 'AGNavigationBarShape', :path => '../'
 end

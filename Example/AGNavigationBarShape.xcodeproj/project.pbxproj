@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D48371A1E2430B000CE1A44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D4837181E2430B000CE1A44 /* Main.storyboard */; };
+		0D48371F1E24320200CE1A44 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D48371D1E24320200CE1A44 /* LaunchScreen.xib */; };
 		0D4B2A141E22F1BA00C8BE36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4B2A121E22F1BA00C8BE36 /* AppDelegate.swift */; };
 		0D4B2A151E22F1BA00C8BE36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4B2A131E22F1BA00C8BE36 /* ViewController.swift */; };
-		0D4B2A181E22F1CF00C8BE36 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D4B2A161E22F1CF00C8BE36 /* LaunchScreen.xib */; };
-		0D4B2A191E22F1CF00C8BE36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D4B2A171E22F1CF00C8BE36 /* Main.storyboard */; };
 		2597C1DCA00B7CDD0A582476 /* Pods_AGNavigationBarShape_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386D73A6F8F16F0B7E33F725 /* Pods_AGNavigationBarShape_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D4837191E2430B000CE1A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0D48371E1E24320200CE1A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		0D4837281E24334800CE1A44 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D4B2A121E22F1BA00C8BE36 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D4B2A131E22F1BA00C8BE36 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0D4B2A161E22F1CF00C8BE36 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		0D4B2A171E22F1CF00C8BE36 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		0D4B2A1A1E22F1D700C8BE36 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BA4AEB21F3962A55E3C3449 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		386D73A6F8F16F0B7E33F725 /* Pods_AGNavigationBarShape_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AGNavigationBarShape_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE82A3DF7E919D27A8B76B3 /* Pods-AGNavigationBarShape_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AGNavigationBarShape_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-AGNavigationBarShape_Example/Pods-AGNavigationBarShape_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -68,8 +68,8 @@
 			children = (
 				0D4B2A121E22F1BA00C8BE36 /* AppDelegate.swift */,
 				0D4B2A131E22F1BA00C8BE36 /* ViewController.swift */,
-				0D4B2A161E22F1CF00C8BE36 /* LaunchScreen.xib */,
-				0D4B2A171E22F1CF00C8BE36 /* Main.storyboard */,
+				0D48371D1E24320200CE1A44 /* LaunchScreen.xib */,
+				0D4837181E2430B000CE1A44 /* Main.storyboard */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = Example;
@@ -79,7 +79,7 @@
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0D4B2A1A1E22F1D700C8BE36 /* Info.plist */,
+				0D4837281E24334800CE1A44 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -144,7 +144,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
@@ -178,8 +178,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D4B2A181E22F1CF00C8BE36 /* LaunchScreen.xib in Resources */,
-				0D4B2A191E22F1CF00C8BE36 /* Main.storyboard in Resources */,
+				0D48371A1E2430B000CE1A44 /* Main.storyboard in Resources */,
+				0D48371F1E24320200CE1A44 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +244,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0D4837181E2430B000CE1A44 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D4837191E2430B000CE1A44 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0D48371D1E24320200CE1A44 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D48371E1E24320200CE1A44 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		607FACED1AFB9204008FA782 /* Debug */ = {
@@ -337,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B82B6DBB7156E7684216A086 /* Pods-AGNavigationBarShape_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -358,6 +378,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3DE82A3DF7E919D27A8B76B3 /* Pods-AGNavigationBarShape_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
