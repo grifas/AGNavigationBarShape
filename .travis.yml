@@ -4,8 +4,8 @@ notifications:
       - aurelien.grifasi@gmail.com
 language: objective-c  #1
 osx_image: xcode8 #2
-xcode_project: ./Example/AGNavigationBarShape.xcworkspace #3
+xcode_project: AGNavigationBarShape.xcworkspace #3
 xcode_scheme: AGNavigationBarShape-Example #4
 script:
-  - xcodebuild -workspace AGNavigationBarShape.xcworkspace -scheme AGNavigationBarShape-Example
+  - xcodebuild -workspace ./Example/AGNavigationBarShape.xcworkspace -scheme AGNavigationBarShape-Example
   - pod lib lint
